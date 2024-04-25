@@ -10,7 +10,7 @@ namespace FormsApp.Models
         [Required(ErrorMessage ="Ürün Adı giriniz.")]
         [StringLength(100)]
         [Display(Name = "Ürün Adı")]
-        public string Name { get; set; } = string.Empty;
+        public string Name { get; set; } = null!;
 
         [Required]
         [Range(0,1000000, ErrorMessage ="Fiyat uygun değil.")]
@@ -26,5 +26,6 @@ namespace FormsApp.Models
         [Required]
         [Display(Name = "Kategori")]
         public int? CategoryId { get; set; }
+        
     }
 }
